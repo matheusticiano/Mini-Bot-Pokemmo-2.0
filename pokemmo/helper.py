@@ -98,7 +98,7 @@ def checa_mapa_e_define_spot_payday():
                 break
 
 
-def voltar_spot_exp():
+def voltar_spot_exp():  # Função que simula a ação de salvar o teleport e ir para spot do local
     sleep(0.2)
     pyautogui.keyDown('s')
     sleep(2.5)
@@ -132,7 +132,7 @@ def set_spot_exp():  # Função que simula a ação de salvar o teleport e ir pa
     voltar_spot_exp()
 
 
-def sweet_scent():
+def sweet_scent():  # Função que simula a ação de usar o sweet scent
     sleep(0.2)
     pyautogui.press('4')
 
@@ -203,11 +203,3 @@ def checa_pokemon_e_contador_exp():  # Função que verifica a presença de um p
             contador -= 1
         else:
             break
-
-
-sleep(1)
-while True:
-    checa_mapa_e_define_spot_exp()
-    sweet_scent()
-    sleep(20)
-    checa_pokemon_e_contador_exp()
