@@ -85,6 +85,13 @@ def teleport():  # Função que simula a ação de teleporta para o cp
     pyautogui.keyDown('5')
     sleep(0.1)
     pyautogui.keyUp('5')
+    pyautogui.keyDown('5')
+    sleep(0.1)
+    pyautogui.keyUp('5')
+    pyautogui.keyDown('5')
+    sleep(0.1)
+    pyautogui.keyUp('5')
+    sleep(3)
 
 
 def voltar_spot_payday():  # Função que simula a ação de voltar ao local de pesca
