@@ -1,9 +1,10 @@
 from PySide6.QtCore import QObject, Signal, Slot, QTimer
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QMainWindow, QGridLayout, QComboBox
+from PySide6.QtWidgets import QWidget, QLabel, QPushButton, QMainWindow, QGridLayout, QComboBox
 from PySide6.QtGui import QPixmap, QMovie, QFont
 from threading import Thread
 from actions import pesca, checa_pokemon_e_contador_payday, checa_seta, checa_mapa_e_define_spot_payday, checa_mapa_e_define_spot_exp, checa_pokemon_e_contador_exp, sweet_scent
 from time import sleep
+from buttons import Button
 import time
 
 
@@ -82,9 +83,9 @@ class MainWindow(QMainWindow):  # Define a Mainwindow
         self.pokemon_emerald.setMovie(pokemon_emerald)
         pokemon_emerald.start()
         pokemon_emerald.setPaused(True)
-        self.btn_start = QPushButton("Iniciar")
-        self.btn_pause = QPushButton("Pausar")
-        self.btn_stop = QPushButton("Encerrar")
+        self.btn_start = Button("Iniciar")
+        self.btn_pause = Button("Pausar")
+        self.btn_stop = Button("Encerrar")
         self.combo_box = QComboBox()
         self.combo_box.addItems(["Exp Farm", "Payday Farm"])
 
