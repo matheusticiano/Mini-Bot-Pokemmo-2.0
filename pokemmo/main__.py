@@ -64,6 +64,7 @@ class MainWindow(QMainWindow):  # Define a Mainwindow
         gengar = QPixmap('pokemmo/files/gengar.png')
         pokemon_emerald = QMovie('pokemmo/files/pokemon_emerald.gif')
         lucario = QPixmap('pokemmo/files/lucario.png')
+        ash = QPixmap('pokemmo/files/ash.png')
         font = QFont('Arial Black', 12, QFont.Bold)
         font2 = QFont('Arial Black', 10, QFont.Bold)
 
@@ -77,6 +78,8 @@ class MainWindow(QMainWindow):  # Define a Mainwindow
         self.label2.setFont(font)
         self.lucario = QLabel()
         self.lucario.setPixmap(lucario)
+        self.ash = QLabel()
+        self.ash.setPixmap(ash)
         self.gengar = QLabel()
         self.gengar.setPixmap(gengar)
         self.pokemon_emerald = QLabel()
@@ -93,6 +96,7 @@ class MainWindow(QMainWindow):  # Define a Mainwindow
         grid.addWidget(self.label2, 0, 0, 1, 2)
         grid.addWidget(self.gengar, 0, 2)
         grid.addWidget(self.combo_box, 1, 0, 1, 2)
+        grid.addWidget(self.ash, 1, 2)
         grid.addWidget(self.label, 2, 0, 1, 3)
         grid.addWidget(self.lucario, 2, 2)
         grid.addWidget(self.pokemon_emerald, 3, 0, 1, 2)
@@ -119,6 +123,8 @@ class MainWindow(QMainWindow):  # Define a Mainwindow
         self.btn_start.setEnabled(False)
         self.btn_pause.setEnabled(True)
         self.btn_stop.setEnabled(True)
+        self.btn_start.setStyleSheet("background-color: gray")
+        self.btn_start.setText(":D")
 
         self.label.setText("Farm em execução...")
 
@@ -154,4 +160,3 @@ class MainWindow(QMainWindow):  # Define a Mainwindow
             self.close()
         except:
             self.close()
-#aaaaaaaaaaaaaaaaa
