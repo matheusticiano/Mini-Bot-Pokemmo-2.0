@@ -38,19 +38,3 @@ def setupTheme():
         },
         additional_qss=qss
     )
-
-
-qss_pink = f"""
-QPushButton[cssClass="specialButtonPink"] {{
-color: #fff;
-background: {PRIMARY_COLOR_1};
-}}
-QPushButton[cssClass="specialButtonPink"]:hover {{
-color: #fff;
-background: {DARKER_PRIMARY_COLOR_1};
-}}
-QPushButton[cssClass="specialButtonPink"]:pressed {{
-color: #fff;
-background: {DARKEST_PRIMARY_COLOR_1};
-}}
-"""
